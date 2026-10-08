@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Introduction to HTML – Course Page</title>
+</head>
+<body>
+
+<header>
+  <h1>Introduction to HTML</h1>
+  <p>A single-page unit guide built with <strong>HTML only</strong>.</p>
+</header>
+
+<nav>
+  <ul>
+    <li><a href="#overview">Overview</a></li>
+    <li><a href="#concepts">Core Concepts</a></li>
+    <li><a href="#formatting">Text Formatting</a></li>
+    <li><a href="#media">Media</a></li>
+    <li><a href="#links">Links &amp; Resources</a></li>
+  </ul>
+</nav>
+
+<main>
+
+  <section id="overview">
+    <h2>Overview</h2>
+    <p>This unit introduces the structure of web pages. You will learn semantic elements, lists, text formatting, media embedding and publishing with GitHub Pages.</p>
+
+    <h3>Learning Outcomes</h3>
+    <ol>
+      <li>Write a valid HTML5 boilerplate.</li>
+      <li>Organise content with semantic elements.</li>
+      <li>Embed images, audio, video and iframes.</li>
+      <li>Version and publish a site using Git and GitHub.</li>
+    </ol>
+  </section>
+
+  <section id="concepts">
+    <h2>Core Concepts</h2>
+
+    <h3>Semantic Elements</h3>
+    <ul>
+      <li>Page landmarks
+        <ul>
+          <li>&lt;header&gt; and &lt;footer&gt;</li>
+          <li>&lt;nav&gt; and &lt;main&gt;</li>
+          <li>&lt;aside&gt;</li>
+        </ul>
+      </li>
+      <li>Content grouping: &lt;section&gt;, &lt;article&gt;, &lt;figure&gt;</li>
+    </ul>
+
+    <h3>Key Terms</h3>
+    <dl>
+      <dt>Element</dt>
+      <dd>A start tag, content and an end tag.</dd>
+      <dt>Attribute</dt>
+      <dd>Extra information inside a start tag, e.g. <code>href</code>.</dd>
+      <dt>Entity</dt>
+      <dd>A code such as <code>&amp;lt;</code> that displays a reserved character.</dd>
+    </dl>
+  </section>
+
+  <section id="formatting">
+    <h2>Text Formatting</h2>
+    <p><strong>Strong</strong> text marks importance, <em>emphasis</em> adds stress, and <mark>highlighted</mark> text draws attention.</p>
+    <p>Chemical formula: H<sub>2</sub>O. Mathematical power: x<sup>2</sup> + y<sup>2</sup> = z<sup>2</sup>.</p>
+    <p>Entities: &copy; 2026 &nbsp;|&nbsp; 5 &lt; 10 &gt; 3 &nbsp;|&nbsp; Tom &amp; Jerry &nbsp;|&nbsp; &hearts; HTML</p>
+
+    <h3>Quotations</h3>
+    <blockquote cite="https://developer.mozilla.org/en-US/docs/Web/HTML">
+      <p>HTML is the standard markup language for documents designed to be displayed in a web browser.</p>
+    </blockquote>
+    <p>As the saying goes, <q cite="https://www.w3.org/">the web is for everyone</q>.</p>
+    <p>Pages are styled with <abbr title="Cascading Style Sheets">CSS</abbr> and scripted with JavaScript.</p>
+  </section>
+
+  <section id="media">
+    <h2>Media</h2>
+
+    <figure>
+      <img src="images/html-structure.svg" alt="Diagram of a page showing header, nav, main with aside, and footer" width="400" height="300">
+      <figcaption>Figure 1: Semantic layout of an HTML5 page.</figcaption>
+    </figure>
+
+    <h3>Video</h3>
+    <video controls width="400">
+      <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4">
+      Your browser does not support the video element.
+    </video>
+
+    <h3>YouTube Lecture</h3>
+    <!-- Replace VIDEO_ID with your chosen lecture's YouTube ID -->
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID" title="HTML lecture video" allowfullscreen></iframe>
+  </section>
+
+  <section id="links">
+    <h2>Links &amp; Resources</h2>
+    <ul>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" rel="noopener noreferrer">MDN HTML documentation</a> (external)</li>
+      <li><a href="mailto:instructor@example.com?subject=HTML%20Course%20Query">Email the instructor</a></li>
+      <li><a href="README.md" download>Download the README</a></li>
+    </ul>
+  </section>
+
+</main>
+
+<aside>
+  <h2>Quick Tips</h2>
+  <ul>
+    <li>Always declare <code>&lt;!DOCTYPE html&gt;</code>.</li>
+    <li>Write meaningful <code>alt</code> text.</li>
+    <li>Commit often.</li>
+  </ul>
+</aside>
+
+<footer>
+  <p>&copy; 2026 Introduction to HTML</p>
+  <address>
+    Course Instructor<br>
+    Department of Computer Science and Engineering<br>
+    <a href="mailto:instructor@example.com">instructor@example.com</a>
+  </address>
+</footer>
+
+</body>
+</html>

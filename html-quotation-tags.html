@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>HTML Quotation & Citation Tags</title>
+<style>
+:root{
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+  --bg:#f3f6f4; --ink:#16231f; --muted:#5a6b65; --card:#ffffff; --line:#cfdad5;
+  --accent:#1f6f5c; --q:#b4472b; --cite:#3b4fa3;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){--bg:#111917;--ink:#e6efeb;--muted:#9bb0a8;--card:#1a2622;--line:#2c3d37;--accent:#57c3a6;--q:#ee8a6c;--cite:#8fa3f0}
+}
+:root[data-theme="dark"]{--bg:#111917;--ink:#e6efeb;--muted:#9bb0a8;--card:#1a2622;--line:#2c3d37;--accent:#57c3a6;--q:#ee8a6c;--cite:#8fa3f0}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 Georgia,"Iowan Old Style",serif}
+main{max-width:760px;margin:0 auto;padding:32px 20px 56px}
+h1{font:700 2rem/1.2 "Trebuchet MS",Verdana,sans-serif;margin:0 0 6px}
+h2{font:700 1.15rem/1.3 "Trebuchet MS",Verdana,sans-serif;margin:0 0 10px;color:var(--accent)}
+.lead{color:var(--muted);margin:0 0 28px}
+section{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:20px 22px;margin-bottom:18px}
+p{margin:0 0 10px}
+code{font:.85em Consolas,Menlo,monospace;background:var(--bg);padding:1px 5px;border-radius:3px}
+.note{color:var(--muted);font-size:.9rem;margin:0}
+
+/* The quotation vs citation contrast */
+q{color:var(--q);font-style:italic;quotes:"\201C" "\201D"}
+blockquote{margin:12px 0;padding:10px 18px;border-left:5px solid var(--q);background:color-mix(in srgb,var(--q) 8%,transparent);font-size:1.1rem}
+blockquote p{margin:0}
+cite{color:var(--cite);font-style:normal;font-weight:700;border-bottom:2px solid var(--cite)}
+blockquote+.by{margin:-4px 0 8px 23px;color:var(--muted);font-size:.9rem}
+abbr{text-decoration:underline dotted var(--accent);text-underline-offset:3px;cursor:help}
+address{font-style:normal;border-left:5px solid var(--accent);padding-left:14px}
+bdo{background:color-mix(in srgb,var(--accent) 18%,transparent);padding:0 4px;border-radius:3px}
+.cmp{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.cmp div{border:1px solid var(--line);border-radius:6px;padding:10px 14px}
+@media (max-width:560px){.cmp{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<main>
+  <h1>Quotation &amp; Citation Tags</h1>
+  <p class="lead">Six semantic HTML tags, each styled so its role is easy to tell apart.</p>
+
+  <section>
+    <h2>&lt;q&gt; — short inline quotation</h2>
+    <p>The browser adds quotation marks automatically. Here, it is styled in <q>italic rust-orange</q> text.</p>
+    <p>As Alan Kay said, <q cite="https://www.quora.com/What-is-the-story-behind-Alan-Kays-adage-The-best-way-to-predict-the-future-is-to-invent-it">The best way to predict the future is to invent it.</q></p>
+  </section>
+
+  <section>
+    <h2>&lt;blockquote&gt; — long quotation from another source</h2>
+    <blockquote cite="https://www.w3.org/">
+      <p>The power of the Web is in its universality. Access by everyone regardless of disability is an essential aspect.</p>
+    </blockquote>
+    <p class="by">— Tim Berners-Lee, in <cite>W3C Accessibility Initiative</cite></p>
+    <p class="note">Block-level, indented, with a left bar and tinted background.</p>
+  </section>
+
+  <section>
+    <h2>&lt;cite&gt; — title of a work</h2>
+    <p>Referenced works get a <cite>blue underlined</cite> style, upright, not italic: <cite>The Art of Computer Programming</cite> by Donald Knuth, or <cite>Fake News Detection Using Machine Learning</cite>.</p>
+  </section>
+
+  <section>
+    <h2>&lt;q&gt; vs &lt;cite&gt; side by side</h2>
+    <div class="cmp">
+      <div><strong>&lt;q&gt;</strong><br>Words someone said: <q>Simplicity is prerequisite for reliability.</q></div>
+      <div><strong>&lt;cite&gt;</strong><br>Name of the work: <cite>Structured Programming</cite></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>&lt;abbr&gt; — abbreviation or acronym</h2>
+    <p>Hover over <abbr title="HyperText Markup Language">HTML</abbr>, <abbr title="Cascading Style Sheets">CSS</abbr> or <abbr title="World Wide Web Consortium">W3C</abbr> to see the full form.</p>
+  </section>
+
+  <section>
+    <h2>&lt;address&gt; — contact information</h2>
+    <address>
+      Department of Computer Science &amp; Engineering<br>
+      Email: <a href="mailto:cse@example.edu">cse@example.edu</a><br>
+      Phone: +91 00000 00000
+    </address>
+  </section>
+
+  <section>
+    <h2>&lt;bdo&gt; — text direction override</h2>
+    <p>Normal: Hello World</p>
+    <p>Reversed with <code>dir="rtl"</code>: <bdo dir="rtl">Hello World</bdo></p>
+  </section>
+</main>
+</body>
+</html>
